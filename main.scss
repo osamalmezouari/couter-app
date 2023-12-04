@@ -1,0 +1,37 @@
+/** @format */
+
+@use "./sass/mixins.scss";
+@use "./sass/rules.scss";
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+.parent {
+	text-align: center;
+	> :nth-child(1) {
+		@include mixins.GlobalStyles;
+	}
+	> :nth-child(2) {
+		@include mixins.GlobalStyles;
+		color: black;
+		font-size: 50px;
+		margin: 50px 0px;
+	}
+	> :nth-child(3) {
+		> button {
+			padding: 5px 30px;
+			background-color: transparent;
+			font-size: 25px;
+			color: black;
+			text-transform: capitalize;
+			border-radius: 5px;
+			font-style: italic;
+			cursor: pointer;
+			&:hover {
+				background-color: black;
+				color: white;
+			}
+		}
+	}
+}
